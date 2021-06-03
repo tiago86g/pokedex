@@ -2,7 +2,8 @@ import axios from 'axios'
 import _ from 'lodash'
 import { GetServerSideProps } from 'next'
 import React from 'react'
-import { PokeOverview } from '../components/PokeOverview'
+import { Layout } from '../components/Layout'
+import { PokeOverview, SinglePokemonProp } from '../components/PokeOverview'
 
 const getSinglePokemon = async (id: string) => {
   const { data } = await axios.get(
@@ -22,11 +23,13 @@ export const getServerSideProps: GetServerSideProps = async ({query}) => {
   }
 }
 
-export const PokemonPage = ({data}: { data: unknown }) => {
+export const PokemonPage:React.FC<SinglePokemonProp> = ({data}) => {
+  console.log('data', data)
+  
   return (
-    <div>
+    <Layout title={'pokemon page'} content={'Pokedex app with all Pokemons'}> 
       <PokeOverview pokemon={data}/>
-    </div>
+    </Layout>
   )
 }
 

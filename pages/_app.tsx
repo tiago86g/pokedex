@@ -15,7 +15,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
   const [pokeTeamData, setPokeTeamData] = useState([])
   
   const getAllPokemons = async () =>{
-    const url = 'https://pokeapi.co/api/v2/pokemon/?limit=649'
+    const url = 'https://pokeapi.co/api/v2/pokemon/?limit=20'
     const { data } = await axios.get(url)
     setPokemonsData(data.results)
   }
