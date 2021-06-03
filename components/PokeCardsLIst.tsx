@@ -17,7 +17,7 @@ export const PokeCardsList: React.FC<PokeCardsListProps> = ({ pokemonsData }) =>
   ))
 
   return (
-    <ul>
+    <ul className={'bg-gray-300'}>
       {cardList === []
         ? <p className='text-center'>There is no Pokemon</p>
         : cardList}    
