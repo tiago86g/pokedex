@@ -23,12 +23,12 @@ export const PokeCard: React.FC<PokeCardProps> = ({name, url, id, pokemonId}) =>
           />
         </a>
       </Link>
-      <button name={'close'} className={'absolute flex -bottom-5 -right-5 rounded-full w-10 hover:w-48 group h-10 bg-green-300 hover:bg-red-200 transition ease-out duration-500'}
+      <button name={'close'} className={'absolute flex -bottom-5 -right-5 rounded-full w-10 hover:w-44 group h-10 bg-green-200 hover:bg-green-300 transition ease-out duration-500'}
       >
-        <AiOutlinePlus className={'w-6 h-6 m-2 fill-current text-gray-600'}/>
         <div>
-          <p className={'m-2 hidden group-hover:inline-flex'}>add to the team</p>
+          <p className={'pl-1 m-2 hidden group-hover:inline-flex'}>add to the team</p>
         </div>
+        <AiOutlinePlus className={'w-6 h-6 m-2 fill-current text-green-800'}/>
       </button>
     </div>
   )
