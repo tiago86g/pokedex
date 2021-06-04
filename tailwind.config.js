@@ -4,9 +4,12 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'auto-fit': 'repeat(auto-fit, minmax(16rem, 1fr))',
-        'auto-fill': 'repeat(auto-fill, minmax(16rem, 1fr))',
+        'auto-fit': 'repeat(auto-fit, minmax(18rem, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(18rem, 1fr))',
       },
+      fontSize: {
+        '10xl': '.24rem',
+      }
     },
   },
   variants: {

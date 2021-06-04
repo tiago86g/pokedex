@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import React, { useEffect, useState } from 'react'
 import 'tailwindcss/tailwind.css'
 import { ModalInfo } from '../components/ModalInfo'
+import { Navbar } from '../components/Navbar'
 
 export enum Modal {
   show,
@@ -15,7 +16,7 @@ function MyApp ({ Component, pageProps }: AppProps) {
   const [pokeTeamData, setPokeTeamData] = useState([])
   
   const getAllPokemons = async () =>{
-    const url = 'https://pokeapi.co/api/v2/pokemon/?limit=20'
+    const url = 'https://pokeapi.co/api/v2/pokemon/?limit=649'
     const { data } = await axios.get(url)
     setPokemonsData(data.results)
   }
@@ -24,11 +25,12 @@ function MyApp ({ Component, pageProps }: AppProps) {
     getAllPokemons()
     const timer = setTimeout(() => {
       setModal(Modal.show)
-    }, 2000)
+    }, 20000)
     return () => clearTimeout(timer)
   }, [])
   return (
     <>
+      <Navbar/>
       <ModalInfo modal={modal} setModal={() => setModal(m => m === Modal.hide ? Modal.show : Modal.hide)}/>
       <Component {...pageProps} pokemonsData={pokemonsData} pokeTeamData={pokeTeamData}/>
     </>
