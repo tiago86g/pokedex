@@ -14,12 +14,11 @@ type PokeHomeProps = {
 }
 
 const PokeHome: React.FC<PokeHomeProps> = ({
-  pokemonsData, pokeTeamData
+  pokemonsData
 }) => {
 
   return (
     <Layout title={'Pokedex'} content={'Pokedex app with all Pokemons'}> 
-      {/* {!!pokeTeamData && <PokeTeam />} */}
       <PokeCardsList pokemonsData={pokemonsData}/>
     </Layout>
   )

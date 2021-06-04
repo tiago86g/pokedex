@@ -20,7 +20,7 @@ export const PokeOverview:React.FC<SinglePokemonProp> = ({ pokemon }) => {
     <div className={'flex m-auto w-screen md:max-w-4xl px-6 overflow-x-scroll'}>
       <div className={'flex flex-col justify-center mt-32 mb-6'}>
         {console.log('pokemon', pokemon)}
-        <div className={'flex justify-center bg-gray-200 rounded-full h-72 w-72 sm:h-96 sm:w-96 m-auto mb-6 border-8 border-blue-600'}>
+        <div className={'flex justify-center bg-gray-200 rounded-full h-72 w-72 sm:h-96 sm:w-96 m-auto mb-6 border-8 border-blue-600 hover:shadow-lg'}>
           <Image 
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`} 
             width={300} 
@@ -35,8 +35,8 @@ export const PokeOverview:React.FC<SinglePokemonProp> = ({ pokemon }) => {
         <ul>
           {stats.map((s: { base_stat: string; stat: { name: string } }, index: number) => 
             <li key={index} className={'flex items-center my-2'}>
-              <Tag width={'w-8'} color={'bg-green-300 m-1'}>{s.base_stat}</Tag>
-              <div className={'uppercase text-xs font-bold'}>{s.stat.name}</div>
+              <Tag width={'w-10'} color={'bg-green-300 m-1'}>{s.base_stat}</Tag>
+              <div className={'ml-2 uppercase text-xs font-bold'}>{s.stat.name}</div>
             </li>
           )}
         </ul>
