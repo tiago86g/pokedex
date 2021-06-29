@@ -6,6 +6,8 @@ module.exports = {
       gridTemplateColumns: {
         'auto-fit': 'repeat(auto-fit, minmax(18rem, 1fr))',
         'auto-fill': 'repeat(auto-fill, minmax(18rem, 1fr))',
+        'auto-fill-mobile': 'repeat(auto-fill, minmax(10rem, 1fr))',
+
       },
       fontSize: {
         '10xl': '.24rem',

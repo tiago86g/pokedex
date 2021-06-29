@@ -24,8 +24,6 @@ export const getServerSideProps: GetServerSideProps = async ({query}) => {
 }
 
 export const PokemonPage:React.FC<SinglePokemonProp> = ({data}) => {
-  console.log('data', data)
-  
   return (
     <Layout title={'pokemon page'} content={'Pokedex app with all Pokemons'}> 
       <PokeOverview pokemon={data}/>
