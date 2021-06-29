@@ -17,7 +17,7 @@ export const PokeCardsList: React.FC<PokeCardsListProps> = ({ pokemonsData }) =>
   ))
 
   return (
-    <ul className={'grid grid-cols-auto-fill gap-4 pt-20 p-4 pr-5'}>
+    <ul className={'grid grid-cols-auto-fill-mobile sm:grid-cols-auto-fill sm:gap-4 pt-20 p-4 pr-5'}>
       {cardList === []
         ? <p className='text-center'>There is no Pokemon</p>
         : cardList}    

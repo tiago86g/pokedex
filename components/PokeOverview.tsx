@@ -19,7 +19,6 @@ export const PokeOverview:React.FC<SinglePokemonProp> = ({ pokemon }) => {
   return (
     <div className={'flex m-auto w-screen md:max-w-4xl px-6 overflow-x-scroll'}>
       <div className={'flex flex-col justify-center mt-32 mb-6'}>
-        {console.log('pokemon', pokemon)}
         <div className={'flex justify-center bg-gray-200 rounded-full h-72 w-72 sm:h-96 sm:w-96 m-auto mb-6 border-8 border-blue-600 hover:shadow-lg'}>
           <Image 
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`} 
