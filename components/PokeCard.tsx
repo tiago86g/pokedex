@@ -13,8 +13,8 @@ type PokeCardProps = {
 export const PokeCard: React.FC<PokeCardProps> = ({name, url, id, pokemonId}) => {
   return (
     <div key={id} className={'relative max-w-64 sm:h-64 h-32 m-4 p-4 bg-gray-100 list-none rounded-md max-w-xl shadow-sm hover:shadow-lg'}>
-      <Link href={`/pokemon?id=${pokemonId}`}>
-        <a className={'flex flex-row sm:flex-col h-28 sm:h-48'}>
+      <Link href={`/pokemon?id=${pokemonId}`} scroll={false}>
+        <a className={'flex flex-row sm:flex-col h-28 sm:h-48'} target='_blank'>
           <p>{name}</p>
           <Image 
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`} 
